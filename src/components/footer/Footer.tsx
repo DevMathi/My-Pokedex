@@ -6,48 +6,56 @@ import GithubIcon from "../../assets/github-icon.svg"
 export function Footer() {
     return (
         <FooterStyled>
-            <h1>Meios de contato</h1>
-            <div className="icons-container">
-                <img
-                    src={WppIcon}
-                    alt="whatsapp icon"
-                    className="whatsapp-icon"
-                />
-                <h2>(11) 98826-0803</h2>
-            </div>
-            <div className="icons-container">
-                <img src={EmailIcon} alt="email icon" className="email-icon" />
-                <h2>mathi.oliveira@hotmail.com</h2>
-            </div>
-            <div className="icons-container">
-                <a
-                    href="https://www.linkedin.com/in/matheus-de-oliveira-/"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <img
-                        src={LinkedinIcon}
-                        alt="linkedin icon"
-                        className="email-icon"
-                    />
-                </a>
+            <div className="footer-container">
+                <div className="icons-container">
+                    <h1>Contato:</h1>
+                    <div className="contatos-container">
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=5511988260803&text&app_absent=0"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img
+                                src={WppIcon}
+                                alt="whatsapp icon"
+                                className="whatsapp-icon"
+                            />
+                        </a>
+                        <a href="mailto:mathi.oliveira@hotmail.com?subject=subject%20text">
+                            <img
+                                src={EmailIcon}
+                                alt="email icon"
+                                className="email-icon"
+                            />
+                        </a>
 
-                <h2>Linkedin</h2>
-            </div>
-            <div className="icons-container">
-                <a
-                    href="https://www.linkedin.com/in/matheus-de-oliveira-/"
-                    target="_blank"
-                    rel="noreferrer"
-                >
-                    <img
-                        src={GithubIcon}
-                        alt="linkedin icon"
-                        className="email-icon"
-                    />
-                </a>
-
-                <h2>Github</h2>
+                        <a
+                            href="https://www.linkedin.com/in/matheus-de-oliveira-/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img
+                                src={LinkedinIcon}
+                                alt="linkedin icon"
+                                className="email-icon"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h2>Outros Projetos:</h2>
+                    <a
+                        href="https://github.com/DevMathi"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <img
+                            src={GithubIcon}
+                            alt="github icon"
+                            className="email-icon"
+                        />
+                    </a>
+                </div>
             </div>
         </FooterStyled>
     )

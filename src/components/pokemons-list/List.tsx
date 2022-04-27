@@ -8,26 +8,44 @@ interface Dados {
 }
 
 export function ListPokes() {
-    const [PokeDados, setPokeDados] = useState<Dados[]>([])
-    const [PokePage, setPokePage] = useState<number>(0)
+    const [pokeDados, setPokeDados] = useState<Dados[]>([])
+    const isMobile = window.screen.width < 768
+    const [pokePage, setPokePage] = useState<number>(isMobile ? 10 : 20)
 
     useEffect(() => {
-        fetch(
-            `https://pokeapi.co/api/v2/pokemon/?limit=30&offset=${PokePage}`
-        ).then((response) =>
-            response.json().then((data) => setPokeDados(data.results))
+        fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${pokePage}`).then(
+            (response) =>
+                response.json().then((data) => setPokeDados(data.results))
         )
-    }, [PokePage])
+    }, [pokePage])
 
     return (
-        <ListPokesStyle>
+        <ListPokesStyle className="lista">
             <div className="container-pokes">
-                {PokeDados.map((pokedado, index) => {
+                {pokeDados.map((pokedado, index) => {
                     return <PokeCard key={index} dados={pokedado} />
                 })}
-                <button onClick={() => setPokePage(PokePage + 10)}>
-                    Próxima Página
+            </div>
+            <div className="container-buttons">
+                <button
+                    onClick={() => setPokePage(pokePage + 10)}
+                    className="load-more-button"
+                >
+                    Carregar mais
                 </button>
+                <a
+                    href=".lista"
+                    onClick={() => {
+                        if (pokePage === 10) {
+                            return
+                        } else {
+                            setPokePage(pokePage - pokePage + 10)
+                        }
+                    }}
+                    className="go-back"
+                >
+                    Voltar ao topo
+                </a>
             </div>
         </ListPokesStyle>
     )

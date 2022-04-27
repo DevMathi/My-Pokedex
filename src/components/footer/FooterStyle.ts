@@ -1,28 +1,32 @@
 import styled from "styled-components"
 
 export const FooterStyled = styled.footer`
-    background-color: #8a2be2;
+    background-color: #808080;
+    .whatsapp-icon {
+        height: 2rem;
+        width: 3rem;
+    }
+    .email-icon {
+        height: 2rem;
+        width: 3rem;
+    }
     @media (max-width: 768px) {
-        height: 100%;
         text-align: center;
         display: flex;
         flex-flow: column;
         justify-content: space-around;
         .icons-container {
-            color: #d8bfd8;
             text-align: center;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
-            margin-top: 10px;
+            flex-flow: column;
         }
-        .whatsapp-icon {
-            height: 2rem;
-            width: 3rem;
+        .contatos-container {
+            display: flex;
+            justify-content: space-around;
         }
-        .email-icon {
-            height: 2rem;
-            width: 3rem;
-        }
+    }
+    @media (min-width: 768px) {
     }
 `
