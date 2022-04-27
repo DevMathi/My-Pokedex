@@ -28,5 +28,6 @@ export const FooterStyled = styled.footer`
         }
     }
     @media (min-width: 768px) {
+        display: none;
     }
 `

@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const HeaderStyle = styled.header`
     background-color: red;
+    position: sticky;
 
     @media (max-width: 768px) {
         display: flex;
@@ -15,7 +16,7 @@ export const HeaderStyle = styled.header`
             display: none;
         }
     }
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1024px) {
         .logo-container {
             display: flex;
             justify-content: center;
@@ -25,23 +26,17 @@ export const HeaderStyle = styled.header`
                 ul {
                     text-align: center;
                     display: flex;
-                    flex-flow: column;
-
+                    flex-flow: row;
+                    justify-content: space-around;
+                    background-color: #808080;
                     li {
-                        background-color: #808080;
+                        width: 100%;
                         padding: 1rem;
                         a {
                             text-decoration: none;
                             color: #d3d3d3;
                         }
-                    }
-                    li:hover {
-                        transition: background-color 0.4s linear;
-                        background-color: red;
-
-                        a {
-                            color: #808080;
-                        }
+                        border: 1px solid black;
                     }
                 }
             }
@@ -62,6 +57,12 @@ export const HeaderStyle = styled.header`
     @media (min-width: 1024px) {
         display: flex;
         justify-content: space-between;
+        body {
+            position: relative;
+        }
+        position: sticky;
+        top: 0;
+        z-index: 1;
         .menu {
             nav {
                 height: 100%;
@@ -82,10 +83,11 @@ export const HeaderStyle = styled.header`
                         }
                     }
                     li:hover {
-                        transition: background-color 0.4s linear;
-                        background-color: #d3d3d3;
+                        filter: brightness(0.8);
+                        transition: filter 0.4s linear;
                         a {
-                            color: #808080;
+                            transition: filter 0.3s linear;
+                            filter: invert(1);
                         }
                     }
                 }

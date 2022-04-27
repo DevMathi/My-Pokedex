@@ -23,9 +23,9 @@ export function Header() {
                                 rel="noreferrer"
                             >
                                 <img
-                                    src={EmailIcon}
-                                    className="email-icon"
-                                    alt="Email icon"
+                                    src={GithubIcon}
+                                    className="github-icon"
+                                    alt="Github icon"
                                 />
                             </a>
                         </li>
@@ -38,7 +38,7 @@ export function Header() {
                                 <img
                                     src={LinkedinIcon}
                                     className="linkedin-icon"
-                                    alt="Email icon"
+                                    alt="Linkedin icon"
                                 />
                             </a>
                         </li>
@@ -49,8 +49,8 @@ export function Header() {
                                 rel="noreferrer"
                             >
                                 <img
-                                    src={GithubIcon}
-                                    className="github-icon"
+                                    src={EmailIcon}
+                                    className="email-icon"
                                     alt="Email icon"
                                 />
                             </a>

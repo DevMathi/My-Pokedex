@@ -195,7 +195,7 @@ export const ListPokesStyle = styled.section`
         .container-pokes {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            padding: 4rem 0rem;
+            padding: 2rem 0rem;
             gap: 1rem;
         }
     }

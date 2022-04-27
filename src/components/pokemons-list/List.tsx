@@ -33,19 +33,18 @@ export function ListPokes() {
                 >
                     Carregar mais
                 </button>
-                <a
-                    href=".lista"
+                <button
                     onClick={() => {
                         if (pokePage === 10) {
                             return
                         } else {
-                            setPokePage(pokePage - pokePage + 10)
+                            window.scroll({ top: 0, behavior: "smooth" })
                         }
                     }}
                     className="go-back"
                 >
                     Voltar ao topo
-                </a>
+                </button>
             </div>
         </ListPokesStyle>
     )

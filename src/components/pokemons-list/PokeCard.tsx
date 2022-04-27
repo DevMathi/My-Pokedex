@@ -32,7 +32,7 @@ export function PokeCard(props: PokeCardProps) {
     }, [urls])
 
     const imgs = dados.map(({ sprites }: DadosProps) => sprites.front_default)
-    const ImgsUrl = imgs[0]
+    const imgsUrl = imgs[0]
 
     return (
         <div className="card-container">
@@ -40,7 +40,7 @@ export function PokeCard(props: PokeCardProps) {
             <h3>N° {dados.map(({ id }: DadosProps) => id)}</h3>
             <div>
                 <img
-                    src={ImgsUrl}
+                    src={imgsUrl}
                     alt="pokemons images"
                     className="pokemons-images"
                 />
@@ -50,7 +50,7 @@ export function PokeCard(props: PokeCardProps) {
                 {dados.map((dados: DadosProps) =>
                     dados.types.map(({ type }: Type, index) => (
                         <h3 className={type.name} key={index}>
-                            {type.name}{" "}
+                            {type.name}
                         </h3>
                     ))
                 )}
