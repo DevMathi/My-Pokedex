@@ -3,22 +3,22 @@
 <p align="center">Pokedex criada a partir das seguintes tecnologias:</p>
 <ul>
     <li>
-      -HTML5
+      HTML5
     </li>
     <li>
-      -CSS3
+      CSS3
     </li>
     <li>
-      -JavaScript
+      JavaScript
     </li>
     <li>
-      -React
+      React
     </li>
     <li>
-      -Styled-components
+      Styled-components
     </li>
     <li>
-      -TypeScript
+      TypeScript
     </li>
   </ul>
   
