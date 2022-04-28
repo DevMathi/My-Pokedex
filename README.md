@@ -25,3 +25,7 @@
 <hr>
 
 ![Screenshot-Project](./src/assets/Screenshot-Project.png)
+![Screenshot-Project](./src/assets/Screenshot2-Project.png)
+
+<hr>
+<h3 align="center">Projeto Finalizado!!</h3>
