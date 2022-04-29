@@ -16,7 +16,7 @@ export const HeaderStyle = styled.header`
             display: none;
         }
     }
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
         .logo-container {
             display: flex;
             justify-content: center;

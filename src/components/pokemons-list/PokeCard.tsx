@@ -36,7 +36,11 @@ export function PokeCard(props: PokeCardProps) {
     const imgsUrl = imgs[0]
 
     return (
-        <div className="card-container" data-aos="zoom-in">
+        <div
+            className="card-container"
+            data-aos="fade-down"
+            data-aos-duration="700"
+        >
             <h2>{dados.map(({ name }: DadosProps) => name)}</h2>
             <h3>N° {dados.map(({ id }: DadosProps) => id)}</h3>
             <div>

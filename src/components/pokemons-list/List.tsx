@@ -35,11 +35,7 @@ export function ListPokes() {
                 </button>
                 <button
                     onClick={() => {
-                        if (pokePage === 10) {
-                            return
-                        } else {
-                            window.scroll({ top: 0, behavior: "smooth" })
-                        }
+                        window.scroll({ top: 0, behavior: "smooth" })
                     }}
                     className="go-back"
                 >
