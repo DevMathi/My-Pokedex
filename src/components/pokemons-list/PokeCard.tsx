@@ -23,7 +23,6 @@ interface Type {
 
 export function PokeCard(props: PokeCardProps) {
     const [urls, setUrls] = useState([props.dados.url])
-    const isMobile = window.screen.width < 768
 
     const [dados, setDados] = useState<DadosProps[]>([])
 
