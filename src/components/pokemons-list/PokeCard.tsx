@@ -38,8 +38,8 @@ export function PokeCard(props: PokeCardProps) {
     return (
         <div
             className="card-container"
-            data-aos="fade-down"
-            data-aos-duration="700"
+            data-aos="zoom-in-up"
+            data-aos-duration="1300"
         >
             <h2>{dados.map(({ name }: DadosProps) => name)}</h2>
             <h3>N° {dados.map(({ id }: DadosProps) => id)}</h3>
