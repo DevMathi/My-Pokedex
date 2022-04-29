@@ -22,6 +22,7 @@ export const ListPokesStyle = styled.section`
             border-radius: 1rem;
             background-color: #dcdcdc;
             padding: 1.5rem 2rem;
+            box-shadow: 0px 0px 2px 0px rgb(0 0 0 / 40%);
 
             .elements-container {
                 display: flex;
@@ -217,6 +218,9 @@ export const ListPokesStyle = styled.section`
         }
         .container-pokes {
             gap: 2rem;
+        }
+        .card-container {
+            transition: transform 0.2s linear;
         }
         .card-container:hover {
             transition: transform 0.2s linear;
