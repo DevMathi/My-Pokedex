@@ -11,7 +11,11 @@ interface DadosProps {
     name: string
     id: number
     sprites: {
-        front_default: string
+        other: {
+            dream_world: {
+                front_default: string
+            }
+        }
     }
     types: Type[]
 }
@@ -32,7 +36,10 @@ export function PokeCard(props: PokeCardProps) {
         )
     }, [urls])
 
-    const imgs = dados.map(({ sprites }: DadosProps) => sprites.front_default)
+    console.log(dados)
+    const imgs = dados.map(
+        ({ sprites }: DadosProps) => sprites.other.dream_world.front_default
+    )
     const imgsUrl = imgs[0]
 
     return (

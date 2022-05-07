@@ -2,9 +2,24 @@ import styled from "styled-components"
 
 export const ListPokesStyle = styled.section`
     padding: 1.3rem;
-    background-color: #a9a9a9;
     button {
         cursor: pointer;
+    }
+    .go-back {
+        position: fixed;
+        bottom: 3rem;
+        right: 4rem;
+        padding: 0.9rem 1.2rem;
+        background-color: #a60620;
+        border-radius: 4rem;
+        border: none;
+        transition: filter 0.3s linear;
+        img {
+            width: 1rem;
+        }
+        &:hover {
+            filter: brightness(0.7);
+        }
     }
 
     .container-pokes {
@@ -17,6 +32,7 @@ export const ListPokesStyle = styled.section`
         }
 
         .card-container {
+            text-transform: capitalize;
             min-width: 317px;
             text-align: center;
             border-radius: 1rem;
@@ -125,6 +141,8 @@ export const ListPokesStyle = styled.section`
             }
             .pokemons-images {
                 min-height: 100px;
+                max-width: 141px;
+                max-height: 196px;
             }
         }
     }
@@ -147,14 +165,6 @@ export const ListPokesStyle = styled.section`
                 border-radius: 1rem;
                 background-color: #87cefa;
                 padding: 1rem 1.8rem;
-            }
-            .go-back {
-                font-size: 1.2rem;
-                border: none;
-                border-radius: 1rem;
-                background-color: #dc143c;
-                padding: 0.5rem 1.2rem;
-                color: white;
             }
         }
         .card-container:not(:first-child) {
@@ -181,14 +191,10 @@ export const ListPokesStyle = styled.section`
                 border-radius: 1rem;
                 background-color: #87cefa;
                 padding: 1rem 1.8rem;
+                transition: filter 0.3s linear;
             }
-            .go-back {
-                font-size: 1.2rem;
-                border: none;
-                border-radius: 1rem;
-                background-color: #dc143c;
-                padding: 1rem 1.8rem;
-                color: white;
+            .load-more-button:hover {
+                filter: brightness(0.8);
             }
         }
     }
@@ -206,15 +212,6 @@ export const ListPokesStyle = styled.section`
             grid-template-columns: 1fr 1fr 1fr 1fr;
             padding: 4rem 2rem;
             gap: 1rem;
-        }
-        .load-more-button:hover {
-            background-color: white;
-            transition: background-color 0.4s linear;
-        }
-        .go-back:hover {
-            background-color: white;
-            color: black;
-            transition: background-color 0.4s linear, color 0.4s linear;
         }
         .container-pokes {
             gap: 2rem;

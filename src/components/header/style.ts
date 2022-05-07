@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const HeaderStyle = styled.header`
-    background-color: red;
+    background-color: #a60620;
     position: sticky;
 
     @media (max-width: 768px) {
@@ -75,7 +75,7 @@ export const HeaderStyle = styled.header`
                     li {
                         display: flex;
                         align-items: center;
-                        background-color: red;
+                        background-color: #a60620;
                         a {
                             padding: 2rem;
                             text-decoration: none;

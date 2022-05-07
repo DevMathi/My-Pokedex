@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { ListPokesStyle } from "./liststyle"
 import { PokeCard } from "./PokeCard"
+import upIcon from "../../assets/angle-up-solid.svg"
 
 interface Dados {
     url: string
@@ -33,15 +34,15 @@ export function ListPokes() {
                 >
                     Carregar mais
                 </button>
-                <button
-                    onClick={() => {
-                        window.scroll({ top: 0, behavior: "smooth" })
-                    }}
-                    className="go-back"
-                >
-                    Voltar ao topo
-                </button>
             </div>
+            <button
+                onClick={() => {
+                    window.scroll({ top: 0, behavior: "smooth" })
+                }}
+                className="go-back"
+            >
+                <img src={upIcon} alt=" topo icone" />
+            </button>
         </ListPokesStyle>
     )
 }
