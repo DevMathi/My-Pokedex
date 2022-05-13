@@ -36,7 +36,6 @@ export function PokeCard(props: PokeCardProps) {
         )
     }, [urls])
 
-    console.log(dados)
     const imgs = dados.map(
         ({ sprites }: DadosProps) =>
             sprites.other["official-artwork"].front_default
