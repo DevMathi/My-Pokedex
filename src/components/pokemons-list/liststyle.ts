@@ -206,7 +206,7 @@ export const ListPokesStyle = styled.section`
             gap: 1rem;
         }
     }
-    @media (min-width: 1350px) {
+    @media (min-width: 1400px) {
         .container-pokes {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
